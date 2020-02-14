@@ -26,7 +26,11 @@
         <tbody>
         <tr>
           <th style="width: 40%">氏名</th>
-          <td><span th:text="*{customerName}"></span></td>
+          <td><span th:text="*{customerName}"></span>
+            <ul th:if="${#fields.hasErrors('customerName')}">
+              <font color="red"><li th:each="err : ${#fields.errors('customerName')}" th:text="${err}"></li></font>
+            </ul>
+          </td>
           <input type="hidden" name="customerName" id="customerName" th:value="*{customerName}"/>
         </tr>
         <tr>

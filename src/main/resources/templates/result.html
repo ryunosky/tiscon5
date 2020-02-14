@@ -93,6 +93,11 @@
           <td><span th:text="*{washingMachineInstallation} ? 'あり' : 'なし'"></span></td>
           <input type="hidden" name="washingMachineInstallation" id="washingMachineInstallation" th:value="*{washingMachineInstallation}"/>
         </tr>
+        <tr>
+          <th>見積もり結果の通知方法</th>
+          <td><span th:text="*{notificationMethodSelection} ? '電話' : 'メール'"></span></td>
+          <input type="hidden" name="notificationMethodSelection" id="notificationMethodSelection" th:value="*{notificationMethodSelection}"/>
+        </tr>
         </tbody>
       </table>
       <div class="form-group">

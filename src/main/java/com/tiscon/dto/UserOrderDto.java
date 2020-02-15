@@ -1,6 +1,11 @@
 package com.tiscon.dto;
 
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+
 public class UserOrderDto {
+
     private String customerName;
 
     private String tel;
@@ -24,6 +29,8 @@ public class UserOrderDto {
     private String washingMachine;
 
     private boolean washingMachineInstallation;
+
+    private boolean notificationMethodSelection;
 
     public String getCustomerName() {
         return customerName;
@@ -49,7 +56,8 @@ public class UserOrderDto {
         this.email = email;
     }
 
-    public String getOldPrefectureId() {
+    public String getOldPrefectureId()
+    {
         return oldPrefectureId;
     }
 
@@ -119,5 +127,12 @@ public class UserOrderDto {
 
     public void setWashingMachineInstallation(Boolean washingMachineInstallation) {
         this.washingMachineInstallation = washingMachineInstallation;
+    }
+    public boolean getNotificationMethodSelection() {
+        return notificationMethodSelection;
+    }
+
+    public void setNotificationMethodSelection(Boolean notificationMethodSelection) {
+        this.notificationMethodSelection = notificationMethodSelection;
     }
 }

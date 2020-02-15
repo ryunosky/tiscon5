@@ -70,40 +70,26 @@
           <label for="box">8.段ボールの個数</label>
           <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
         </div>
-        <table class="ProductTable">
-          <tr>
-            <td>
-              <div class="form-group">
-                <label for="bed">9.ベッドの個数(段ボール20個/1床)</label>
-                <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3"/>
-              </div>
-            </td>
-            <td>
-              <div class="form-group">
-                <label for="bicycle">10.自転車の個数(段ボール15個/1台)</label>
-                <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1"/>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="form-group">
-                <label for="washingMachine">11.洗濯機の個数(段ボール10個/1台)</label>
-                <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
-                       value="1"/>
-              </div>
-            </td>
-            <td>
-              <div class="form-group">
-                <label for="washingMachineInstallation">12.洗濯機の設置工事申し込み＋３０００円</label>
-                <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
-                  <option th:value="false" th:text="なし">なし</option>
-                  <option th:value="true" th:text="あり">あり</option>
-                </select>
-              </div>
-            </td>
-          </tr>
-        </table>
+        <div class="form-group">
+          <label for="bed">9.ベッドの個数(段ボール20個/1床)</label>
+          <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3"/>
+        </div>
+        <div class="form-group">
+          <label for="bicycle">10.自転車の個数(段ボール15個/1台)</label>
+          <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1"/>
+        </div>
+        <div class="form-group">
+          <label for="washingMachine">11.洗濯機の個数(段ボール10個/1台)</label>
+          <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
+                 value="1"/>
+        </div>
+        <div class="form-group">
+          <label for="washingMachineInstallation">12.洗濯機の設置工事申し込み＋３０００円</label>
+          <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
+            <option th:value="false" th:text="なし">なし</option>
+            <option th:value="true" th:text="あり">あり</option>
+          </select>
+        </div>
         <div class="form-group">
           <label for="notificationMethodSelection">13.見積もり結果の通知方法を選択してください</label>
           <select id="notificationMethodSelection" name="notificationMethodSelection" class="form-control" th:field="*{notificationMethodSelection}">

@@ -60,6 +60,10 @@ public class EstimateService {
         packageList.add(new CustomerPackage(customer.getCustomerId(), PackageType.BED.getCode(), dto.getBed()));
         packageList.add(new CustomerPackage(customer.getCustomerId(), PackageType.BICYCLE.getCode(), dto.getBicycle()));
         packageList.add(new CustomerPackage(customer.getCustomerId(), PackageType.WASHING_MACHINE.getCode(), dto.getWashingMachine()));
+        packageList.add(new CustomerPackage(customer.getCustomerId(), PackageType.TV.getCode(), dto.getBox()));
+        packageList.add(new CustomerPackage(customer.getCustomerId(), PackageType.REFRIGERATOR.getCode(), dto.getBox()));
+        packageList.add(new CustomerPackage(customer.getCustomerId(), PackageType.MICROWAVE.getCode(), dto.getBox()));
+        packageList.add(new CustomerPackage(customer.getCustomerId(), PackageType.TABLE.getCode(), dto.getBox()));
         estimateDAO.batchInsertCustomerPackage(packageList);
     }
 
@@ -80,7 +84,11 @@ public class EstimateService {
         int boxes = getBoxForPackage(dto.getBox(), PackageType.BOX)
                 + getBoxForPackage(dto.getBed(), PackageType.BED)
                 + getBoxForPackage(dto.getBicycle(), PackageType.BICYCLE)
-                + getBoxForPackage(dto.getWashingMachine(), PackageType.WASHING_MACHINE);
+                + getBoxForPackage(dto.getWashingMachine(), PackageType.WASHING_MACHINE)
+                + getBoxForPackage(dto.getBed(), PackageType.TV)
+                + getBoxForPackage(dto.getBed(), PackageType.REFRIGERATOR)
+                + getBoxForPackage(dto.getBed(), PackageType.MICROWAVE)
+                + getBoxForPackage(dto.getBed(), PackageType.TABLE);
 
         // 箱に応じてトラックの種類が変わり、それに応じて料金が変わるためトラック料金を算出する。
 

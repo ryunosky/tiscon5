@@ -93,16 +93,26 @@
           <td><span th:text="*{washingMachineInstallation} ? 'あり' : 'なし'"></span></td>
           <input type="hidden" name="washingMachineInstallation" id="washingMachineInstallation" th:value="*{washingMachineInstallation}"/>
         </tr>
+        <tr>
+          <th>見積もり結果の通知方法</th>
+          <td><span th:text="*{notificationMethodSelection} ? '電話' : 'メール'"></span></td>
+          <input type="hidden" name="notificationMethodSelection" id="notificationMethodSelection" th:value="*{notificationMethodSelection}"/>
+        </tr>
         </tbody>
       </table>
       <div class="form-group">
         <div class="text-center">
           <button type="submit" name="backToConfirm" class="btn btn-primary">戻る</button>
-          <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼</button>
+          <button type="submit" name="complete" class="btn btn-primary" onClick="return checkSubmit()">詳細見積もり依頼</button>
         </div>
       </div>
     </div>
   </form>
+  <script type="text/javascript">
+  function checkSubmit() {
+    return confirm("ご入力いただいた情報を基に詳細見積もりを行います。よろしいですか。");
+  }
+  </script>
 </div>
 <script src="../js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
 <script src="../js/popper.min.js" th:src="@{/js/popper.min.js}"></script>

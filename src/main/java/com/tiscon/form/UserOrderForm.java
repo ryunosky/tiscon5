@@ -54,6 +54,9 @@ public class UserOrderForm {
     @NotNull
     private boolean washingMachineInstallation;
 
+    @NotNull
+    private boolean notificationMethodSelection;
+
     public String getCustomerName() {
         return customerName;
     }
@@ -148,5 +151,12 @@ public class UserOrderForm {
 
     public void setWashingMachineInstallation(boolean washingMachineInstallation) {
         this.washingMachineInstallation = washingMachineInstallation;
+    }
+    public boolean getNotificationMethodSelection() {
+        return notificationMethodSelection;
+    }
+
+    public void setNotificationMethodSelection(boolean notificationMethodSelection) {
+        this.notificationMethodSelection = notificationMethodSelection;
     }
 }

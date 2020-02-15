@@ -91,10 +91,10 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="notificationmethodselection">13.見積もり結果の通知方法を選択してください</label>
-          <select  name="notificationmethodselection">
-            <option th:value="false" th:text="メール">なし</option>
-            <option th:value="true" th:text="電話">あり</option>
+          <label for="notificationMethodSelection">13.見積もり結果の通知方法を選択してください</label>
+          <select id="notificationMethodSelection" name="notificationMethodSelection" class="form-control" th:field="*{washingMachineInstallation}">
+            <option th:value="false" th:text="メール">メール</option>
+            <option th:value="true" th:text="電話">電話</option>
           </select>
         </div>
       </fieldset>

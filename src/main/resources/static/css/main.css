@@ -196,3 +196,8 @@ ul.label {
 td {
     width: 400px;
 }
+
+.ProductTable {
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+}
